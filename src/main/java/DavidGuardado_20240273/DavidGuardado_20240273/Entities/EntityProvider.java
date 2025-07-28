@@ -15,15 +15,15 @@ public class EntityProvider {
 
     @Id
     @Column(name = "PROVIDERID")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_provider")
-    @SequenceGenerator(name = "seq_provider", sequenceName = "seq_provider", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PROVIDER")
+    @SequenceGenerator(name = "SEQ_PROVIDER", sequenceName = "SEQ_PROVIDER", allocationSize = 1)
     private Long providerID;
 
-    @Column(name = "PROVIDERNAME")
+    @Column(name = "PROVIDERNAME", unique = true)
     private String providerName;
 
     @Column(name = "PROVIDERPHONE")
-    private Long providerPhone;
+    private String providerPhone;
 
     @Column(name = "PROVIDERADDRESS")
     private String providerAddress;
@@ -31,11 +31,11 @@ public class EntityProvider {
     @Column(name = "PROVIDEREMAIL")
     private String providerEmail;
 
-    @Column(name = "PROVIDEREMAIL")
-    private Long providerCode;
+    @Column(name = "PROVIDERCODE", unique = true)
+    private String providerCode;
 
     @Column(name = "PROVIDERSTATUS")
-    private String providerStatus;
+    private Long providerStatus;
 
     @Column(name = "PROVIDERCOMMENTS")
     private String providerComments;

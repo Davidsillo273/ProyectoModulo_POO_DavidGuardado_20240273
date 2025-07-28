@@ -15,18 +15,16 @@ import lombok.ToString;
 public class DTOProvider {
 
     //Campos
-
     @Positive
-    @NotNull
     private Long providerID;
 
     @NotBlank
     @Size(max = 50)
     private String providerName;
 
-    @NotBlank
+    @NotNull
     @Size(max = 50)
-    private Long providerPhone;
+    private String providerPhone;
 
     @NotBlank
     @Size(max = 128)
@@ -37,12 +35,11 @@ public class DTOProvider {
     @Size(max = 100)
     private String providerEmail;
 
-    @NotBlank
+    @NotNull
     @Size(max = 35)
-    private Long providerCode;
+    private String providerCode;
 
-    @NotBlank
-    private String providerStatus;
+    private Long providerStatus;
 
     @NotBlank
     @Size(max = 256)
